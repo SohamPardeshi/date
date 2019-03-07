@@ -1,0 +1,33 @@
+<html>
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="styles.css">
+        
+        <title>These are my dates</title>
+    </head>
+    <body>
+        
+        <textarea id="text" rows="4" cols="50"></textarea><br/><br/>
+        <button id="btn">Download</button>
+        
+        <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCdzdvmuSVXihQlbAzDR8xlp3wKZ98_3SQ",
+                authDomain: "realtime-sql-db.firebaseapp.com",
+                databaseURL: "https://realtime-sql-db.firebaseio.com",
+                projectId: "realtime-sql-db",
+                storageBucket: "realtime-sql-db.appspot.com",
+                messagingSenderId: "1052752682035"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="download.js"></script>
+    </body>
+</html>
