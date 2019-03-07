@@ -12,7 +12,7 @@ function submit() {
         console.log(temp);
         for(var key in temp) {
             var t = temp[key];
-            var s = t.panda + " " + t.something + " " + t.pets + " " + t.name;
+            var s = t.panda + " " + t.temp + " " + t.pets + " " + t.name;
             text.value += s + "\n";
         }
         

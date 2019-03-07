@@ -17,14 +17,14 @@ function submit() {
     }
     
     else if(!isFloat(b.value)) {
-        alert("Something is not a double");
+        alert("Ideal temperature is not a double");
     }
     
     else {
         var db = firebase.database().ref('dates');
         var newPostKey = db.push({
             name: a.value,
-            something: parseFloat(b.value),
+            temp: parseFloat(b.value),
             pets: parseInt(c.value),
             panda: d.value
         });
