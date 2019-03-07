@@ -16,6 +16,7 @@ function submit() {
             text.value += s + "\n";
         }
         
+        alert("Submitted!");
     });
     
 }

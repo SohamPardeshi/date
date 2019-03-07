@@ -7,16 +7,43 @@ function submit() {
     var c = document.getElementById('c');
     var d = document.getElementById('d');
     
-    // TODO validation
-    
-    var db = firebase.database().ref('dates');
-    var newPostKey = db.push({
-        name: a.value,
-        something: b.value,
-        pets: c.value,
-        panda: d.value
-    });
+    if(empty(a.value) || empty(b.value) || empty(c.value) || empty(d.value)) {
+        alert("Not all data fields filled out");
+    }
     
     
-    a.value = b.value = c.value = d.value = '';
+    else if(!isInt(c.value)) {
+        alert("Number of pets is not an int");
+    }
+    
+    else if(!isFloat(b.value)) {
+        alert("Something is not a double");
+    }
+    
+    else {
+        var db = firebase.database().ref('dates');
+        var newPostKey = db.push({
+            name: a.value,
+            something: parseFloat(b.value),
+            pets: parseInt(c.value),
+            panda: d.value
+        });
+
+        a.value = b.value = c.value = d.value = '';
+    }
+}
+
+
+function empty(str) {
+    return str === "" || str == null;
+}
+
+function isInt(n){
+    n = parseInt(n);
+    return Number(n) === n && n % 1 === 0;
+}
+
+function isFloat(n){
+    n = parseFloat(n);
+    return Number(n) === n && n % 1 !== 0;
 }
