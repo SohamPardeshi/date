@@ -21,7 +21,7 @@ function submit() {
     }
     
     else {
-        var db = firebase.database().ref('dates');
+        var db = firebase.database().ref('friends');
         var newPostKey = db.push({
             name: a.value,
             temp: parseFloat(b.value),
