@@ -16,7 +16,7 @@ function submit() {
         alert("Number of pets is not an int");
     }
     
-    else if(!isFloat(b.value)) {
+    else if(!isInt(b.value) && !isFloat(b.value)) {
         alert("Ideal temperature is not a double");
     }
     
