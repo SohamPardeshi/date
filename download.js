@@ -6,7 +6,7 @@ function submit() {
     var text = document.getElementById('text');
     text.value = "";
     
-    var db = firebase.database().ref('dates');
+    var db = firebase.database().ref('friends');
     db.once('value').then(function(snapshot) {
         var temp = snapshot.val();
         console.log(temp);
